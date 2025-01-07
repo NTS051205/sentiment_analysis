@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    <h1>Sentiment Analysis</h1>
+    <form id="uploadForm">
+        <label for="file">Upload Excel file:</label>
+        <input type="file" id="file" name="file" accept=".xlsx" required>
+        <button type="submit">Upload</button>
+    </form>
+    <div id="dashboardLink" style="display:none; margin-top: 20px;">
+        <p>View the analysis on the <a href="/dashboard" target="_blank">Dashboard</a>.</p>
+        <button id="downloadButton">Download Results</button>
+    </div>
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>

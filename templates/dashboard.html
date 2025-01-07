@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: #4CAF50;">Sentiment Analysis Dashboard</h1>
+    <canvas id="sentimentChart" width="400" height="200" style="margin: auto; display: block;"></canvas>
+    <script>
+        // Data from the server
+        const data = {
+            labels: ['Positive', 'Neutral', 'Negative'],
+            datasets: [{
+                label: 'Sentiment Distribution',
+                data: [{
+                    {
+                        positive
+                    }
+                }, {
+                    {
+                        neutral
+                    }
+                }, {
+                    {
+                        negative
+                    }
+                }],
+                backgroundColor: ['#4CAF50', '#FFC107', '#F44336'],
+                hoverOffset: 4
+            }]
+        };
+
+        // Configuration for the pie chart
+        const config = {
+            type: 'pie',
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Sentiment Analysis Results'
+                    }
+                }
+            },
+        };
+
+        // Render the chart
+        const sentimentChart = new Chart(
+            document.getElementById('sentimentChart'),
+            config
+        );
+    </script>
+</body>
+
+</html>
